@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Week-4</title>
+        <script>
+
+            var numbersArray = [1, 2, 3, 4];
+            var duplicateValueArray = ['Jombo', 22, 34, 1, 22, 'Jombo', 'Jombo', 'Mike']
+
+            //count to twenty
+            function countToTwenty() {
+                for (i = 0; i <= 20; i++) {
+                    console.log("current number is " + i);
+                }
+            }
+
+            //function print only odd numbers from 1 to 20
+            function onlyOdd() {
+                for (i = 0; i <= 20; i++) {
+                    if (i % 2 != 0) {
+                        console.log("current odd number is " + i);
+                    }
+                }
+            }
+
+            //summ of array
+            function sumOfArrayElements(arr) {
+                var currentNumber = 0;
+                for (i = 0; i < arr.length; i++) {
+                    currentNumber += arr[i]
+                }
+
+                console.log('The sum of the elements from the following array: ' + '[' + arr + ']' + ' is ' + currentNumber);
+            }
+
+            //detect total of array numbers - easy version
+            function totalArrayElements(arr) {
+                console.log('The following array ' + '[' + arr + ']' + ' has a total of ' + arr.length + ' elements');
+            }
+
+            //function totalArrayElements - alternate version without .length method
+            function totalArrayElementsAlternate(arr) {
+                count = 0;
+                for (i = 0; i < arr.length; i++) {
+                    count++;
+                }
+
+                console.log('The following array ' + '[' + arr + ']' + ' has a total of ' + count + ' elements.'
+                    + 'This version does not use .length() on array'
+                );
+            }
+
+            //check occurrence of a certain element within an array
+            function checkForDuplicate(arr, searchVaule) {
+                var count = 0;
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i] === searchVaule) {
+                        count++;
+                    }
+                }
+
+                console.log(
+                    'Value ' + searchVaule + ' has an occurence of: ' + count + ' in the following array '
+                    + '[' + arr + ']'
+                );
+
+            }
+
+            function generate01Pattern() {
+                var number0 = ' 0';
+                var number1 = ' 1';
+                var stringPattern = '';
+
+                /*
+                   In order to make the code more readable the nested for loops could be
+                   separated to their own functions then called within the if checks
+                   but in order to respected the exercise requirement it was left it like this
+                 */
+
+                for (i = 0; i < 4; i++) {
+                    //constructs string pattern starting with 0
+                    if (i % 2 === 0) {
+                        for (j = 0; j < 4; j++) {
+                            if (j % 2 === 0) {
+                                stringPattern += number0;
+                            } else {
+                                stringPattern += number1;
+                            }
+                        }
+                    //constructs string pattern starting with 1
+                    } else {
+                        for (j = 0; j < 4; j++) {
+                            if (j % 2 !== 0) {
+                                stringPattern += number0;
+                            } else {
+                                stringPattern += number1;
+                            }
+                        }
+                    }
+                    stringPattern += '\n';
+                }
+
+                console.log(stringPattern);
+            }
+
+
+            countToTwenty();
+            console.log('end exercise - 1' + '\n' + ' ');
+
+            onlyOdd();
+            console.log('end exercise - 2' + '\n' + ' ');
+
+            sumOfArrayElements(numbersArray);
+            console.log('end exercise - 3' + '\n' + ' ');
+
+            totalArrayElements(numbersArray);
+            totalArrayElementsAlternate(numbersArray);
+            console.log('end exercise - 4' + '\n' + ' ');
+
+            checkForDuplicate(duplicateValueArray, 22);
+            checkForDuplicate(duplicateValueArray, 'Jombo');
+            console.log('end exercise - 5' + '\n' + ' ');
+
+            console.log('Challange Exercise');
+            generate01Pattern();
+
+        </script>
+    </head>
+    <body>
+        <h1>Javascript Control Structures</h1>
+        <p>Using control structures, do the following:</p>
+        <ol>
+            <li>display in the console the numbers from 1 to 20</li>
+            <li>display in the console the odd numbers from 1 to 20</li>
+            <li>compute the sum of the elements of an array and display it in the console</li>
+            <li>compute the maximum of the elements of an array and display it in the console</li>
+            <li>compute how many times a certain element appears in an array</li>
+        </ol>
+        <br>
+        <p>Challenge:</p>
+        <p>using nested for generate the following pattern</p>
+        <ul style="list-style: none">
+            <li>0 1 0 1</li>
+            <li>1 0 1 0</li>
+            <li>0 1 0 1</li>
+            <li>1 0 1 0</li>
+        </ul>
+    </body>
+</html>
