@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+    // 1. O functie "equals" care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale
+    function equals(a,b) {
+        return a === b ? true : false;
+    }
+
+    /* 2. O functie "compare" care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea,
+       0 daca sunt egale si 1 daca primul e mai mare ca al doilea */
+    function compare(a,b){
+        return a < b ? -1 : a === b ? 0 : 1;
+    }
+
+    // 3. O functie "max" care primeste 2 valori si returneaza maximul dintre cele 2
+    function max(a,b) {
+        return a > b? a : b;
+    }
+
+    // 4. O functie "min" care primeste 2 valori si returneaza minimul dintre cele 2
+    function min(a,b) {
+        return a < b? a : b;
+    }
+
+    // 5. O functie "suma" care intoarce suma primelor N numere naturale pozitive
+    function suma(a,b) {
+        if ( a < 0 && b < 0) {
+            return a*-1 + b*-1;
+        } else if ( a < 0 ) {
+            return a*-1 + b;
+        } else if ( b < 0) {
+            return b*-1 + a;
+        } else {
+            return a + b;
+        }
+    }
+
+    // 6. O functie "prim" care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)
+    function prim(num) {
+
+        if ( num < 2) {
+            return '1 is not considered a prime number';
+        }
+
+        for( var i = 2; i < num; i++ ) {
+            if ( num % i === 0 ) {
+                return num + ' is not a prime number';
+            }
+        }
+
+        return num + ' is a prime number';
+    }
+
+    // 7. O functie "sumaPrime" care intoarce suma primelor N numere prime (pentru N=5 trebuie suma 2+3+5+7+11)
+
+    /*Nu am reusit sa o fac pe aceasta
+    * Am gasit o solutie aici https://repl.it/repls/EuphoricCourteousSnake dar aici sunt folositie 2 functii;
+    * Desii inteleg solutia de mai sus am vrut sa fac o singura functie de sine statoare care sa faca acesta dar nu am reusit;
+    * */
+
+    function sumaPrime(num){
+        // var primeArray = [];
+        // var currentNumber = 2;
+        //
+        //
+        // for (i=0; i < num; i++) {
+        //     for (j=0; j <= currentNumber; j++) {
+        //         // console.log(currentNumber)
+        //         if ( currentNumber%j !== 0) {
+        //             console.log(currentNumber)
+        //         }
+        //     }
+        //
+        //     primeArray.push(currentNumber);
+        //     currentNumber+=1;
+        // }
+        //
+        // return primeArray;
+    }
+
+    // 8. O functie "invers" care primeste un parametru de tip numar si intoarce inversul acestuia (ca numar) (123 => 321)
+    function invers(num) {
+        /*
+         La momentul scrierii acestui comment
+         nu am vorbit la curs despre typeof dar exercitiul spune ca primeste un paramentru de tip numar,
+         nu am de unde sa fac o comparatie de tip '123' === 123 in momentul apelului decat daca as stii dinainte valoarea pe care
+         o voi primi ca argument. De aceia am folost typeof, sper ca este OK.
+        */
+        if( typeof num === "number") {
+            var numberAsString = num + '';
+            var newString = '';
+            var stringLength = numberAsString.length - 1;
+
+            for( i = stringLength; i >= 0; i-- ) {
+                newString += numberAsString[i];
+            }
+
+            return newString*1;
+        } else {
+            return "given function argument " + num + " is not of type number";
+        }
+
+    }
+
+    // 9. O functie "produsImpare" care intoarce produsul primelor N numere impare pozitive
+    function produsImpare (num){
+        var arrayImpare  = [];
+        var rezultatProdus = 1;
+
+        for ( i = 0; i <= num; i++ ) {
+            if( i%2 !== 0 ) {
+                arrayImpare.push(i);
+            }
+        }
+
+        for (j = 0; j < arrayImpare.length; j++ ) {
+            rezultatProdus *= arrayImpare[j];
+        }
+
+        return rezultatProdus;
+    }
+
+    // 10. O functie "contains" care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array
+    function contains(arr, x){
+        if (arr.indexOf(x) !== -1) {
+            return x + ' exisists in the following array ' + arr;
+        } else {
+            return x + ' does not exisist in the following array ' + arr;
+        }
+    }
+
+    //  11. O functie "maxArray" care intoarce maximul dintr-un array primit ca parametru
+    function maxArray(arr){
+        var currentNumber = 1;
+        for(i = 0; i < arr.length; i++) {
+            if(arr[i] > currentNumber) {
+                currentNumber = arr[i];
+            }
+        }
+        return currentNumber;
+    }
+
+    // 12. O functie "sumMinMax" care intoarce suma dintre max si min, dintr-un array primit ca parametru
+    function sumMinMax(arr){
+        var lowestNumber = 1;
+        var highestNumber = 1;
+
+        for(i = 0; i <= arr.length; i++) {
+            if(arr[i] > highestNumber) {
+                highestNumber = arr[i];
+            }
+        }
+
+        for(j = 0; j <= arr.length; j++) {
+            if(arr[j] < lowestNumber) {
+                lowestNumber = arr[j];
+            }
+        }
+
+        return lowestNumber + highestNumber;
+    }
+
+    // 13. O functie "hasDuplicates" care verifica daca exista duplicate intr-un array primit ca parametru
+    function hasDuplicates(arr){
+
+        for (i = 0; i <= arr.length; i++) {
+            for ( j = i; j <= arr.length; j++){
+                if ( i !== j && arr[i] === arr[j]) {
+                    return 'the following array has duplicate values ' + '[' + arr + ']';
+                }
+            }
+        }
+
+        return 'array ' + '[' + arr + ']' + ' has no duplciates';
+
+    }
+
+    // 14. O functie "produsPozitive" care intoarce produsul numerelor pozitive intr-un array primit ca parametru
+    function produsPozitve(arr) {
+        var result = 1;
+        for (i=0 ; i < arr.length; i++) {
+            if( arr[i] >= 0) {
+                result *= arr[i];
+            }
+        }
+
+        return result;
+    }
+
+    /* 15. O functie "palindrom" care verifica daca un numar primit ca parametru este
+           palindrom (inversul == originalul, ex: 1234321, 55, 787) */
+    function palindrom(num){
+        if ( typeof num === "number") {
+            var numberAsString = num + '';
+            for (i = 0; i< numberAsString.length; i++){
+                if(numberAsString[i] !== numberAsString[numberAsString.length-i-1]){
+                    return num + ' nu este palindrom';
+                }
+            }
+            return num + ' este palindrom';
+        }
+
+    }
+
+   console.log('1. O functie "equals" care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale.');
+   console.log(equals(1,1));
+   console.log(equals(1,2));
+   console.log('\n');
+
+   console.log('2. O functie "compare" care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, ' +
+              '0 daca sunt egale si 1 daca primul e mai mare ca al doilea.');
+   console.log(compare(1,2));
+   console.log(compare(1,1));
+   console.log(compare(3,2));
+   console.log('\n');
+
+   console.log('3. O functie "max" care primeste 2 valori si returneaza maximul dintre cele 2.');
+   console.log(max(3,4));
+   console.log(max(5,6));
+   console.log('\n');
+
+   console.log('4. O functie "min" care primeste 2 valori si returneaza minimul dintre cele 2');
+   console.log(min(3,4));
+   console.log(min(5,6));
+   console.log('\n');
+
+   console.log('5. O functie "suma" care intoarce suma primelor N numere naturale pozitive');
+   console.log(suma(-1,1));
+   console.log(suma(-1,-2));
+   console.log(suma(1,3));
+   console.log('\n');
+
+   console.log('6. O functie "prim" care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)');
+   console.log(prim(9));
+   console.log(prim(7));
+   console.log('\n');
+
+   console.log('7. O functie "sumaPrime" care intoarce suma primelor N numere prime (pentru N=5 trebuie suma 2+3+5+7+11)');
+   // console.log(sumaPrime(5));
+   console.log('\n');
+
+   console.log('8. O functie "invers" care primeste un parametru de tip numar si intoarce inversul acestuia (ca numar) (123 => 321)');
+   console.log(invers(123));
+   console.log(invers('123'));
+   console.log('\n');
+
+   console.log('9. O functie "produsImpare" care intoarce produsul primelor N numere impare pozitive\n');
+   console.log(produsImpare(5));
+   console.log('\n');
+
+   console.log('10. O functie "contains" care primeste 2 parametri(arr - array de nr intregi si x - numar) ' +
+               'si verifica daca x exista in array');
+   console.log(contains([1,2,3,4,5], 1));
+   console.log(contains([1,2,3,4,5], 6));
+   console.log('\n');
+
+   console.log('11. O functie "maxArray" care intoarce maximul dintr-un array primit ca parametru');
+   console.log(maxArray([4,7,9]))
+   console.log('\n');
+
+   console.log('12. O functie "sumMinMax" care intoarce suma dintre max si min, dintr-un array primit ca parametru');
+   console.log(sumMinMax([1,5,9,10]));
+   console.log('\n');
+
+   console.log('13. O functie "hasDuplicates" care verifica daca exista duplicate intr-un array primit ca parametru');
+   console.log(hasDuplicates([2,2,5,5,6,9,22]));
+   console.log(hasDuplicates([1,2,3,5]));
+   console.log('\n');
+
+   console.log('14. O functie "produsPozitive" care intoarce produsul numerelor pozitive intr-un array primit ca parametru');
+   console.log(produsPozitve([-1,-2,3,5]));
+   console.log('\n');
+
+   console.log('15. O functie "palindrom" care verifica daca un numar primit ca parametru este\n' +
+       '           palindrom (inversul == originalul, ex: 1234321, 55, 787)');
+   console.log(palindrom(123321));
+   console.log(palindrom(567));
+
+
+</script>
+<body>
+    <ol>
+        <li>O functie "equals" care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale</li>
+        <li>O functie "compare" care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea</li>
+        <li>O functie "max" care primeste 2 valori si returneaza maximul dintre cele 2</li>
+        <li>O functie "min" care primeste 2 valori si returneaza minimul dintre cele 2</li>
+        <li>O functie "suma" care intoarce suma primelor N numere naturale pozitive</li>
+        <li>O functie "prim" care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)</li>
+        <li>O functie "sumaPrime" care intoarce suma primelor N numere prime (pentru N=5 trebuie suma 2+3+5+7+11)</li>
+        <li>O functie "invers" care primeste un parametru de tip numar si intoarce inversul acestuia (ca numar) (123 => 321)</li>
+        <li>O functie "produsImpare" care intoarce produsul primelor N numere impare pozitive</li>
+        <li>O functie "contains" care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array</li>
+        <li>O functie "maxArray" care intoarce maximul dintr-un array primit ca parametru</li>
+        <li>O functie "sumMinMax" care intoarce suma dintre max si min, dintr-un array primit ca parametru</li>
+        <li>O functie "hasDuplicates" care verifica daca exista duplicate intr-un array primit ca parametru</li>
+        <li>O functie "produsPozitive" care intoarce produsul numerelor pozitive intr-un array primit ca parametru</li>
+        <li>O functie "palindrom" care verifica daca un numar primit ca parametru este palindrom (inversul == originalul, ex: 1234321, 55, 787)</li>
+    </ol>
+</body>
+</html>
