@@ -1,0 +1,141 @@
+.form {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 1rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    background: #ffffff;
+}
+
+.form__heading {
+    background: #4d4d4d;
+    color: #797979;
+    margin-bottom: .75rem;
+    padding: .5rem;
+}
+
+.form__content {
+    display: flex;
+    justify-content: space-between;
+    flex:  0 0 100%;
+}
+
+.form__inputs,
+.form__image {
+   flex: 0 0 40%;
+}
+
+.form__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form__image img {
+    width: 100%;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form__group--gender {
+    align-items: center;
+    flex-direction: row;
+}
+
+.form__group label {
+    margin-bottom: .5rem;
+}
+
+.form__group--gender label {
+    margin: 0;
+}
+
+.form__group input {
+    border: 0;
+}
+
+.form__group input:focus {
+    outline: none;
+}
+
+.form__group--gender input[type="radio"]:first-of-type {
+    margin-right: 1rem;
+}
+
+.form__group--name input {
+    border-bottom: 1px solid #bcb2b2;
+    padding: .35rem 0;
+}
+
+.form__group--name input:first-of-type {
+    margin-bottom: 1rem;
+}
+
+.form textarea {
+    border: 1px solid #bcb2b2;
+    min-height: 30px;
+    max-width: 280px;
+
+    padding: .55rem;
+    width: calc( 100% - 1.1rem );
+}
+
+
+.form textarea:focus {
+    outline: none;;
+}
+
+input[type="submit"] {
+    box-shadow: inset 0 1px 0 0 #45d6d6;
+    background-color: #2cbbbb;
+    border: 1px solid #27a0a0;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-size: .7rem;
+    padding: .4rem .9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom,#34caca 5%,#30c9c9 100%);
+    background-color: #34caca;
+}
+
+.form__confirm {
+    background-color: #bfe9c4;
+    color: #368f41;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%);
+    top: 12%;
+    height: 0;
+    left: 50%;
+    margin-top: .75rem;
+    overflow: hidden;
+    transition: height .35s ease-out, padding .35s ease-out;
+}
+
+.form__confirm--active {
+    padding: .35rem;
+    height: 35px;
+    overflow: visible;
+}
+
+.form__group input.invalid-input,
+.form__group--gender.invalid-input,
+.form textarea.invalid-input {
+    border: 1px solid red;
+}
+
