@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             lastName.classList.add("invalid-input");
         }
 
-
         return false;
     }
 
@@ -72,7 +71,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         var banner = document.querySelector('.form__confirm');
         var firstName = undefined;
         var lastName = undefined;
-        var userName = undefined;
+        var bannerMessage = undefined;
         var namesStatus = checkNames();
         var radioStaus = checkRadioInputs();
         var commentStatus = checkComment();
@@ -81,9 +80,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if( namesStatus && radioStaus && commentStatus ) {
             firstName = document.querySelector("#first_name").value;
             lastName = document.querySelector("#last_name").value;
-            userName = "Hello " + firstName + " " + lastName + " " + "thank you for submitting the form";
+            bannerMessage = "Hello " + firstName + " " + lastName + " " + "thank you for submitting the form";
 
-            banner.textContent = userName;
+            banner.textContent = bannerMessage;
             banner.classList.add('form__confirm--active');
 
             return true;
