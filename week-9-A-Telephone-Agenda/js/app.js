@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Prevent form from submitting if focus is not on the phone number input
     form.addEventListener("keypress", function (event) {
-        if(event.key == "Enter") {
+        if(event.key === "Enter") {
             event.preventDefault();
         }
     });
 
     // Enter user on enter keypress if focus is on the phone number input
     phoneInput.addEventListener("keypress", function(event){
-        if(event.key == "Enter") {
+        if(event.key === "Enter") {
             onInputSave();
         }
     });
