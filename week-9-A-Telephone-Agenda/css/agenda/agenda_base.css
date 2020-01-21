@@ -1,0 +1,23 @@
+/* -- Agenda base styles --*/
+
+.agenda {
+    background: var(--base-color);
+    border: 1px solid var(--base-color);
+    border-radius: 3px;
+    margin: 0 auto;
+    max-width: 425px;
+    padding: 1rem;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.agenda h1 {
+    color: var(--base-white);
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 576px) {
+    .agenda {
+        max-width: 650px;
+    }
+}

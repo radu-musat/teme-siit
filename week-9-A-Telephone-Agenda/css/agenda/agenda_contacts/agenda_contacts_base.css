@@ -1,0 +1,42 @@
+/* -- Agenda contacts base level -- */
+
+.agenda__contacts {
+    background: var(--base-white);
+    border-radius: 3px;
+    padding: .5rem;
+}
+
+.agenda__contacts-headings {
+    border-bottom: 2px solid var(--base-powder);
+    display: none;
+    margin-bottom: 1rem;
+    padding: .75rem;
+}
+
+.agenda__contacts-headings:last-child {
+    margin-bottom: 0;
+}
+
+.agenda__contact-name-heading,
+.agenda__contact-phone-heading {
+    background: var(--base-color);
+    border-radius: 3px;
+    color: var(--base-white);
+    padding: .25rem;
+    text-align: center;
+}
+
+.agenda__contact-name-heading {
+    margin-right: 1rem;
+    flex-basis: 31.5%;
+}
+
+.agenda__contact-phone-heading {
+    flex-basis: 32%;
+}
+
+@media only screen and (min-width: 587px) {
+    .agenda__contacts-headings {
+        display: flex;
+    }
+}

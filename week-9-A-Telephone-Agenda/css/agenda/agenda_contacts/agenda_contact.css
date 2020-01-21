@@ -1,0 +1,116 @@
+/* --Agenda Contact -- */
+
+.agenda__contact {
+    background: var(--base-powder);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: .75rem;
+}
+
+.agenda__contact:last-child {
+    margin-bottom: 0;
+}
+
+.agenda__contact-details {
+    margin-bottom: .75rem;
+}
+
+.agenda__contact-heading-mobile {
+    color: var(--text-regular);
+    font-size: .75rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.agenda__contact-name,
+.agenda__contact-phone {
+    background: var(--base-color);
+    border-radius: 3px;
+    color: var(--base-white);
+    display: block;
+    padding: .25rem;
+    text-align: center;
+}
+
+.agenda__contact-name {
+    margin-bottom: .55rem;
+}
+
+.agenda__contact-phone {
+    flex-basis: 45.712%;
+    padding: .25rem;
+}
+
+.agenda__contact-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.agenda__contact-edit,
+.agenda__contact-delete {
+    cursor: pointer;
+    color: var(--base-color);
+    background: none;
+    padding: 0;
+    border:  0;
+    font-size: .75rem;
+    transition: opacity .35s ease-out;
+}
+
+.agenda__contact-edit:hover,
+.agenda__contact-delete:hover {
+    opacity: .75;
+}
+
+.agenda__contact-edit:focus,
+.agenda__contact-delete:focus {
+ outline: none;
+}
+
+.agenda__contact-edit {
+    margin-right: 1rem;
+}
+
+.agenda__contact-edit::before,
+.agenda__contact-delete::before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    margin-right: .35rem;
+}
+
+
+.agenda__contact-edit::before {
+    content: "\f4ff";
+}
+
+.agenda__contact-delete::before {
+    content: "\f503";
+}
+
+@media only screen and (min-width: 587px) {
+    .agenda__contact {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .agenda__contact-details {
+        display: flex;
+        flex-basis: 70%;
+        margin-bottom: 0;
+    }
+
+    .agenda__contact-heading-mobile {
+        display: none;
+    }
+
+    .agenda__contact-name {
+        flex-basis: 45%;
+        margin: 0 1rem 0 0;
+    }
+
+    .agenda__contact-controls {
+        justify-content: space-between;
+    }
+}
+

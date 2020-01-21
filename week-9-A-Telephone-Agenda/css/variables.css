@@ -1,0 +1,18 @@
+/* -- variables -- */
+
+:root {
+
+    /* -- project-brading colors -- */
+    --base-color: #17a2b8;
+    --base-white: #ffffff;
+    --base-smoke: #495057;
+    --base-powder: #e9ecef;
+
+    /* -- font colors -- */
+    --text-regular: var(--base-smoke);
+    --text-white: var(--base-white);
+
+}
+
+
+

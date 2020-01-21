@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Phone Agenda</title>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/c73d4da8d5.js" crossorigin="anonymous"></script>
+        <!-- Stylsheets -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- JS -->
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- agenda -->
+            <div class="agenda">
+                <h1>Contacts</h1>
+
+                <!-- form -->
+                <form class="agenda__form">
+                    <div class="agenda__form-group">
+                        <!-- Name input -->
+                        <label for="name">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" id="name" placeholder="Name">
+                        </label>
+
+                        <!-- Phone input -->
+                        <label for="phone">
+                            <i class="fas fa-mobile-alt"></i>
+                            <input type="number" name="phone" id="phone" placeholder="Phone Number">
+                        </label>
+                    </div>
+                    <input class="agenda__submit-button" type="submit" value="Add Contact">
+                </form>
+
+                <!-- agenda contacts -->
+                <section class="agenda__contacts">
+                    <!-- contacts headings -->
+                    <div class="agenda__contacts-headings">
+                        <h3 class="agenda__contact-name-heading">Name</h3>
+                        <h3 class="agenda__contact-phone-heading">Phone Number</h3>
+                    </div>
+
+                    <!-- agenda contact list -->
+                    <ul class="agenda__contacts-list"></ul>
+                </section>
+
+
+
+            </div>
+        </div>
+    </body>
+</html>
