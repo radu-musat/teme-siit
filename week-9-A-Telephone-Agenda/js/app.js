@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener("click" , function(event){
         event.preventDefault();
         onInputSave();
+        console.log(contacts);
     });
 
 
@@ -84,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        nameInputValue = "";
-        phoneInputValue = "";
+        document.querySelector("#name").value = "";
+        document.querySelector("#phone").value = "";
 
     }
 
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             draw();
         } else {
+            console.log('new')
             save();
             draw();
         }
@@ -131,6 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 contacts.splice(contacts.indexOf(contact),1);
             }
         }
+        selectedId = undefined;
+
         draw();
     }
 
