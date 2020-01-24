@@ -1,0 +1,15 @@
+.shopping-list {
+    background: var(--ocean);
+    border-radius: 3px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 1rem;
+    width: 100%;
+}
+
+@media only screen and ( min-width: 760px ) {
+    .shopping-list {
+        max-width: 650px;
+    }
+}

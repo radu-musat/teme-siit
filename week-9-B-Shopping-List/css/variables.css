@@ -1,0 +1,22 @@
+:root  {
+    /* -- main color variables -- */
+    --ocean: #17A2B7;
+    --white: #ffffff;
+    --powder: #e9ecef;
+    --gray: #a6afb7;
+
+    /* -- theme color settings  -- */
+    --main-color: var(--ocean);
+    --secondary-color: var(--white);
+    --support-color: var(--powder);
+
+    --main-text-color: var(--white);
+    --secondary-text-color: var(--gray);
+
+    --main-button-color: var(--main-color);
+
+    /* -- font-weights */
+    --font-weight-light: 300;
+    --font-weight-medium: 400;
+    --font-weight-bold: 700;
+}

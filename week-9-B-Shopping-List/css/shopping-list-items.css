@@ -1,0 +1,106 @@
+.shopping-list__items {
+    line-height: 1.5;
+}
+
+.shopping-list__items-headings {
+    border-bottom: 2px solid #ffc930;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: .85rem;
+}
+
+.shopping-list__items-headings h2 {
+   color: var(--main-text-color);
+   flex-basis: 50%;
+   text-align: center;
+}
+
+.shopping-list__items-headings h2:nth-child(1) {
+   flex-basis: 100%;
+}
+
+.shopping-list__items-headings h2:nth-child(1) span:nth-child(1) {
+    display: none;
+}
+
+.shopping-list__items-headings h2:nth-child(2) {
+    display: none;
+}
+
+.shopping-list__items-list {
+    background: var(--support-color);
+    border-radius: 3px;
+    padding: .45rem;
+}
+
+.shopping-list__item {
+    background: var(--secondary-color);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: .85rem;
+}
+
+.shopping-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.shopping-list__item .shopping-list__item-name,
+.shopping-list__item .button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.shopping-list__item .shopping-list__item-name {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.shopping-list__item-name.shopping-list__item-name--purchased {
+    text-decoration: line-through ;
+}
+
+@media only screen and ( min-width: 760px ) {
+    .shopping-list__items-headings {
+        justify-content: flex-start;
+    }
+
+    .shopping-list__items-headings h2 {
+        text-align: left;
+    }
+
+    .shopping-list__items-headings h2:nth-child(1) {
+        flex-basis: 50%;
+    }
+
+    .shopping-list__items-headings h2:nth-child(1) span:nth-child(1) {
+        display: block;
+    }
+
+    .shopping-list__items-headings h2:nth-child(1) span:nth-child(2) {
+        display: none;
+    }
+
+    .shopping-list__items-headings h2:nth-child(2) {
+        display: block;
+    }
+
+    .shopping-list__item {
+        align-items: center;
+        display: flex;
+    }
+
+
+    .shopping-list__item .button {
+        flex-basis: 35%;
+        margin: 0;
+        width: auto;
+    }
+
+    .shopping-list__item .shopping-list__item-name {
+        flex-basis: 50%;
+        margin: 0;
+        text-align: left;
+    }
+}

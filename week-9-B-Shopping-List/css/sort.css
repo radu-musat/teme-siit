@@ -1,0 +1,28 @@
+.shopping-list__sort {
+    background: var(--secondary-color);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.shopping-list__sort .button {
+    width: 100%;
+}
+
+.shopping-list__sort .button:nth-child(1) {
+    margin-bottom: 1rem;
+}
+
+@media only screen and ( min-width: 760px ) {
+    .shopping-list__sort {
+        display: inline-block;
+    }
+
+    .shopping-list__sort .button {
+        width: auto;
+    }
+
+    .shopping-list__sort .button:nth-child(1) {
+        margin-bottom: 0;
+    }
+}
