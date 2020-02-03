@@ -1,0 +1,27 @@
+/* -- variables -- */
+
+:root  {
+    /* -- main color variables -- */
+    --white: #ffffff;
+    --black: #000000;
+    --powder: #ebe8e8;
+    --gray: #a6afb7;
+    --gray-alternate: #a1a0a0;
+
+    /* -- theme color settings  -- */
+    --main-color: var(--powder);
+    --secondary-color: var(--white);
+    --support-color: var(--gray);
+
+    --main-text-color: var(--black);
+    --secondary-text-color: var(--white);
+    --anchor-color: var(--gray-alternate);
+
+    --main-button-background: var(--main-color);
+    --main-button-color: var(--support-color);
+
+    /* -- font-weights */
+    --font-weight-light: 300;
+    --font-weight-medium: 400;
+    --font-weight-bold: 700;
+}

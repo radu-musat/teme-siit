@@ -1,0 +1,14 @@
+.contact li {
+    margin-bottom: 1rem;
+}
+
+@media only screen and ( min-width: 760px ) {
+    .contact ul {
+        margin-right: 1rem;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+    }
+}

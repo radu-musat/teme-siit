@@ -1,0 +1,14 @@
+@import "base-settings/variables.css";
+@import "base-settings/reset.css";
+@import "base-settings/typograhpy.css";
+@import "base-settings/container.css";
+@import "elements/button.css";
+@import "header.css";
+@import "food-list.css";
+@import "form.css";
+@import "item-details.css";
+@import "contact.css";
+@import "google-maps.css";
+@import "admin.css";
+@import "delete.css";
+

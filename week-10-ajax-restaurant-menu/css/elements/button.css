@@ -1,0 +1,18 @@
+.button {
+    background: var(--main-button-background);
+    border-radius: 3px;
+    color: var(--main-button-color);
+    display: inline-block;
+    padding: .35rem;
+    text-align: center;
+    transition: filter .3s ease-out;
+}
+
+.button:hover {
+    filter: brightness(103%);
+}
+
+button.button {
+    border: 0px;
+    cursor: pointer;
+}
