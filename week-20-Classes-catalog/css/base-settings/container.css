@@ -1,0 +1,48 @@
+.container {
+    padding: 1rem;
+}
+
+#lista_elevi_wrapper {
+    background: #17a2b8;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+#note_elevi_wrapper {
+    background: #17a2b8;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+#note_elevi_wrapper > h2 {
+    margin-bottom: 1rem;
+}
+
+#note_elevi_wrapper > button {
+    width: 50%;
+}
+
+#note_elevi_wrapper.note_elevi_wrapper--inactive {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #lista_elevi_wrapper,
+    #note_elevi_wrapper {
+        flex: 0 0 49%;
+    }
+
+    #lista_elevi_wrapper.lista_elevi_wrapper--full {
+        flex: 0 0 100%;
+    }
+
+    #lista_elevi_wrapper {
+        margin-bottom: 0;
+    }
+}

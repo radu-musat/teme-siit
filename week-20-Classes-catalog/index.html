@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
+        <script type="module" src="js/app.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div id="lista_elevi_wrapper">
+                <h2>Lista Elevi</h2>
+                <div class="sort">
+                    <button id="sortAscending">Sorteaza ascendent dupa medie</button>
+                    <button id="sortDescending">Sorteaza descendent dupa medie</button>
+                </div>
+                <form id="forumlarElev">
+                    <label>
+                        Nume:
+                        <input id="nume-elev" type="text">
+                    </label>
+                    <input type="submit" value="Adauaga elev">
+                </form>
+
+                <div class="tabel-elevi">
+                    <div class="header-elevi">
+                        <h2>Nume</h2>
+                        <h2>Medie Note</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div id="note_elevi_wrapper">
+                <h2>Elev</h2>
+                <button id="hide">Ascunde note</button>
+
+                <form id="adaugaNota">
+                    <label>
+                        Adauga nota
+                        <input id="notaNoua" type="number">
+                    </label>
+                    <button type="submit">Adauaga nota</button>
+                </form>
+
+                <ul class="note__elev">
+                    <li>Selectati un elev</li>
+                </ul>
+            </div>
+
+        </div>
+    </body>
+</html>

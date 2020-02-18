@@ -1,0 +1,39 @@
+/*-- coloana lista de elevi  --*/
+
+#lista_elevi_wrapper > h2 {
+    margin-bottom: 1rem;
+}
+
+.sort {
+    margin-bottom: 1rem;
+}
+
+.sort button:first-child {
+    margin-bottom: .55rem;
+}
+
+/* -- tabel elevi -- */
+.header-elevi,
+.elev {
+    display: flex;
+    width: 100%;
+}
+
+.header-elevi h2,
+.elev h3,
+.elev span,
+.elev button {
+    flex: 0 0 30%
+}
+
+.header-elevi {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: .25rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and ( min-width: 768px ) {
+    .sort {
+        width: 35%;
+    }
+}

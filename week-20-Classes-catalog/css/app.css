@@ -1,0 +1,6 @@
+@import "base-settings/reset.css";
+@import "base-settings/container.css";
+@import "elements/form.css";
+@import "elements/button.css";
+@import "tabel-elevi.css";
+@import "tabel-note.css";

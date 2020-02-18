@@ -1,0 +1,24 @@
+button,
+input[type=submit]{
+    background: #ffffff;
+    border: 0px;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    margin-bottom: .55rem;
+    padding: .45rem;
+    width: 100%;
+    text-align: center;
+    transition: background-color .25s ease-out;
+}
+
+input[type=submit] {
+    width: auto;
+    margin: 0;
+}
+
+button:hover,
+input[type=submit]:hover {
+background: #e9fffa;
+}
